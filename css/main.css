@@ -81,17 +81,18 @@ p{
 .social-links{
     list-style: none;
     padding: 0;
-    margin-top: 3em;
+    margin-top: 0em;
     display: flex;
     flex-direction: row;
     justify-content: center
-
 }
 
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 5em;
+    margin: 0px 5px;
+    padding: 0px 0px 20px 10px; 
 }
 
 
@@ -156,6 +157,7 @@ p{
 
 .about{
     margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .about h2 {
@@ -263,20 +265,7 @@ footer .social-links {
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
-    .post ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .post ul li {
-        min-height: 350px;
-        max-height: 3500px;
-        margin: 1rem 2rem;
-        flex: 1 0 300px;
-    }
-
+    /*seccion big-hero*/
 
     .logo {
         width: 150px;
@@ -301,10 +290,69 @@ footer .social-links {
         margin-top: 1em;
     }
 
+    .social-links{
+        margin-top: 0em;
+    }
 
+    .social-links li a{
+        font-size: 12em;
+        margin: 0px 20px;
+        padding: 0px 0px 20px 25px; 
+        display: flex;
+        justify-content: center;
+    }
 
+    .show-desktop i{
+        margin:0px 30px 15px 30px;
+        padding: 0px 0px 80px 25px;
+        font-size: 6.5em;
+        color: #0AC693;
+    }
 
-    /*TODO: FALTA CSS */
+    /* seccion post*/
+
+    .post ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        align-items: center;
+    }
+    
+    .post ul li {
+        min-height: 350px;
+        max-height: 3500px;
+        max-width: 250px;
+        margin: 1rem 2rem;
+        flex: 1 0 300px;
+    }
+
+    .post ul li article{
+        min-height: 450px;
+    }
+
+    /*seccion about me*/
+
+    .about h2{
+        width: 50%;
+    }
+
+    .about .contact{
+        width: 50%;
+    }
+
+    .about .bio-info{
+        width: 50%;
+    }
+
+    .about .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
 } 
 
 @media only screen and (min-width: 1024px) {
