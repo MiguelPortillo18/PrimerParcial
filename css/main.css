@@ -2,14 +2,16 @@
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
-*, ::before, ::after {
-    margin: 0;
+*, ::before, ::after {    /*Bloque para determinar todo lo que permanecera constante en la estructura*/
+    margin: 0;            /*de la pagina web*/
     padding: 0;
     box-sizing: border-box;
-    font-size: calc(0.5em + 1vh);
+    font-size: calc(0.5em + 1vh); /*calculo para que el tamaño de la fuente se ajuste a la resolucion de la pantalla*/
 }
 
 /* El estilo base para moviles */
+
+    /*Propiedades para el cuerpo de la pagina web(color de fondo, fuente,ajuste del texto)*/
 body {
     background-color: #112935;
     color: white;
@@ -18,11 +20,13 @@ body {
     font-weight: 400;
 }
 
+    /*Diseño para manejo de encabezado de la pagina*/
 .header {
     display: flex;
     justify-content: space-between
 }
 
+    /*Manejo de opciones del menu en el dispositivo movil (No se muestran en pantalla de Escritorio)*/
 .src-only {
     display: none;
 }
@@ -37,11 +41,15 @@ p{
     line-height: 25px;
 }
 
+    /*Diseño para logo de autor de la pagina web*/
 .logo {
     width: 90px;
     margin: 1em;
 }
 
+    /*Diseño para opciones del menu para pantallas de mayor resolucion, el color es heredado del cuerpo de
+    la pagina web, se determina posicion de las opciones del menu, tamaño de fuente y manera en la que
+    se mostrara en pantalla (display)*/
 .options {
     color: inherit;
     text-decoration: none;
@@ -59,11 +67,17 @@ p{
     font-size: 1.6rem;
 }
 
-/* Big area */
+    /* Big area */
+
+    /*Clase big-hero, area donde se muestra imagen del autor, una breve descripcion del mismo y
+    algunas redes sociales de contacto*/
+
+    /*Ajuste para el tamaño de imagen del autor*/
 .big-hero img {
     width: 150px;
 }
 
+    /*Ajustes para el nombre del autor (etiqueta h2) y para breve descripcion del autor (etiqueta p)*/
 .big-hero h2 {
     font-size: 1.875em;
     font-weight: 700;
@@ -77,7 +91,8 @@ p{
 
 }
 
-/* Social links*/
+    /* Agregando propiedades a los links de acceso a las redes sociales del autor, forma en la que se 
+    mostrara en pantalla (display), color, tamaño de fuente y espaciado entre cada logo de red social*/
 .social-links{
     list-style: none;
     padding: 0;
@@ -95,16 +110,19 @@ p{
     padding: 0px 0px 20px 10px; 
 }
 
-
+    /*Determinando color para el area que contendra las publicaciones (green-area)*/
 .green-area {
     background-color: #0AC693; 
 }
 
-
+    /*Diseño que contendra el area de publicaciones, y cada publicacion en especifico (post)*/
+    /*Margen y espaciado de las publicaciones*/
 .post {
     padding: 1em;
     margin-bottom: -2px;
 }
+
+    /*Diseño para titulo de las publicaciones*/
 .post h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -112,10 +130,14 @@ p{
     margin: 1em;
 }
 
+    /*Diseño para la lista de publicaciones (ul), incluyendo sus elementos (li), y el contenido de cada 
+    elemento de la lista de publicaciones (article)*/
 .post ul {
     list-style: none;
 }
 
+    /*Estableciendo tamaño (ancho y alto) de cada publicacion, asi como caracteristicas que tendra el contenido
+    de las publicaciones (color de fuente, ajuste del texto y espaciado de texto)*/
 .post ul li {
     min-height: 300px;
     max-width: 350px;
@@ -130,12 +152,15 @@ p{
     padding-bottom: 2em;
 }
 
+    /*Ajuste de las imagenes de encabezado de las publicaciones*/
 .post article img{
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
 
+    /*Diseño para tema de cada publicacion (etiqueta h3) y su respectivo contenido (etiqueta p) (color y tamaño de fuente, espaciado
+    ajuste de margenes en el texto)*/
 .post article h3 {
     color: #0D5061;
     margin-top: 2em;
@@ -153,8 +178,9 @@ p{
     line-height: 25px;
 }
 
-/* About */
-
+    /* Seccion acerca de mi (About me) */
+    /*Ajuste para titulo de la seccion ("Acerca de"), (Ajuste de margenes, orientacion del texto, tamaño de
+    fuente, el color es heredado del diseño realizado para todo el trabajo)*/
 .about{
     margin-top: 2em;
     margin-bottom: 2em;
@@ -167,10 +193,15 @@ p{
     margin: 2em;
 }
 
+    /*La seccion cuenta con otras dos secciones internas, una descripcion breve del autor (bio-info) y 
+    un formulario de contacto con el autor (contact)*/
+
+    /*Determinando ancho del logo que aparece al principio de la breve descripcion*/
 .bio-info img{
    width: 200px;
 }
 
+    /*Ajuste del parrafo que contiene la descripcion del autor (AJuste del texto, orientacion, espaciado)*/
 .bio-info p{
     font-size: 16px;
     padding: 2em;
@@ -178,7 +209,8 @@ p{
     line-height: 25px;
     letter-spacing: 2px;
 }
-
+    /*Diseño del espacio que contendra el formulario de contacto: se establece la forma en la que se desea que
+    aparezca en pantalla, su orientacion (en columna y a la izquierda), y espaciado del area*/
 .contact {
     display: flex;
     flex-direction: column;
@@ -196,6 +228,8 @@ p{
     padding: 0em;
 }
 
+    /*Ajustes del formato de formulario, ajuste de texto, diseño de las entradas de texto (border-radius), y 
+    tamaño de la fuente del encabezado de cada campo en el formulario*/
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
@@ -204,7 +238,8 @@ p{
     width: 100%;
 }
 
-/* Decorando placeholder */
+    /* Decorando placeholder, el placeholder es el area blanca en la que el usuario introduce sus datos para
+    completar el formulario */
 
 ::-webkit-input-placeholder { 
     color: #D7DEE6; 
@@ -227,6 +262,7 @@ p{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
+    /*Diseño para el contenido de pie de pagina (color de fondo y color de la fuente)*/
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
@@ -236,6 +272,11 @@ footer .social-links {
     margin: 0;
 }
 
+    /*Ajuste que tendra el menu de opciones para dispositivos moviles. A diferencia de los dispositivos que
+    cuentan con una pantallamas amplia, el menu de opciones en el dispositivo movil se podra visualizar 
+    mediante una lista que aparece si se presiona la barra que despliega dicho menu*/
+
+    /*Color de fondo del menu, posicion, tamaño de fuente y ancho de vista en el dispositivo*/
 .menu {
     background-color: #112935;
     position: absolute;
@@ -246,6 +287,8 @@ footer .social-links {
     height: calc(100vh - 60px);
 }
 
+    /*Ajuste para la lista de opciones que se mostraran, con el color de fuente, tamaño y manera en la que
+    se mostrara en pantalla*/
 .menu {
     list-style: none;
     text-align: left;
@@ -263,20 +306,25 @@ footer .social-links {
     
 }
 
-/* Pesonalizando estilo para tablets*/
-@media only screen and (min-width: 768px) {
+    /* Pesonalizando estilo para tablets. Se diseña un media query, en el que contendra ajustes especificos
+    del diseño de la pagina web para una mejor visualizacion y mejor experiencia de usuario, en este caso
+    usuarios de dispositvos moviles tipo tablet, en la que las pantallas aumentan su tamaño y resolucion*/
 
+@media only screen and (min-width: 768px) { 
+
+    /*Ajuste en la seccion big-hero. Modificacion del tamaño de fuente del texto que muestra la breve
+    descripcion del autor*/
     .container p{
         font-size: 0.8em;
     }
       
-    /*seccion big-hero*/
-
+    /*Ajuste del tamaño del logo que aparece en la seccion de presentacion*/
     .logo {
         width: 150px;
         margin: 1.5em;
     }
 
+    /*Diseño para la vista de las opciones de mostrar y ocultar menu*/
     .show-desktop {
         display: block;
     }
@@ -285,6 +333,8 @@ footer .social-links {
         display: none;
     }
 
+    /*Ajuste para la lista de opciones que se mostraran, con el color de fuente, tamaño y manera en la que
+    se mostrara en pantalla*/
     .menu {
         background-color: #112935; 
         position: static;
@@ -295,10 +345,14 @@ footer .social-links {
         margin-top: 1em;
     }
 
+    /*Ajuste para los logos de redes sociales de contacto*/
     .social-links{
         margin-top: 0em;
     }
 
+    /*Modificacion en el tamaño de fuente de los logos de acceso a redes sociales de contacto
+    (tamaño mas grande para mejor visualizacion en tablet y dispositivos con resolucion semejante, y mas
+    espacio entre ellos)*/
     .social-links li a{
         font-size: 12em;
         margin: 0px 20px;
@@ -307,6 +361,7 @@ footer .social-links {
         justify-content: center;
     }
 
+    /*Misma modificacion para el logo que muestra el contenido (Escritorio) de la pagina web*/
     .show-desktop i{
         margin:0px 30px 15px 30px;
         padding: 0px 0px 80px 25px;
@@ -314,10 +369,13 @@ footer .social-links {
         color: #0AC693;
     }
 
-    /* seccion post*/
+    /* seccion de publicaciones*/
 
-
-
+    /*Modificacion en el tamaño en que se mostraran la lista de publicaciones, se agrega la propiedad de 
+    flex-start que ajusta los elementos de manera que inicien del lado izquierdo, tal y como el ser humano
+    visualiza los elementos, ademas se agrega la funcion flex-wrap que hace que cuando los 
+    elementos ya no se ajustan al tamaño de la pantalla, estos hagan un salto de linea y se coloquen 
+    debajo del primer elemento de forma alineada manteniendo el espacio entre ellos*/
     .post ul {
         list-style: none;
         display: flex;
@@ -326,6 +384,10 @@ footer .social-links {
         justify-content:flex-start;
     }
     
+    /*Los elementos tienen ahora un tamaño maximo de alto que pueden alcanzar dentro de la pantalla, asi 
+    como un tamaño maximo de ancho entre cada elemento, este es el encargado de mantener el mismo ancho en
+    todas las publicaciones y al momento de que funcione el flex-wrap, los elementos sigan manteniendo las
+    mismas dimensiones*/
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
@@ -334,11 +396,21 @@ footer .social-links {
         flex: 1 0 300px;
     }
 
+    /*Ajuste del texto que contiene cada publicacion de manera que se ajuste tambien a las dimensiones del
+    elemento que lo contiene*/
     .post ul li article{
         min-height: 450px;
     }
 
-    /*seccion about me*/
+    /*seccion about me (Acerca de)*/
+
+    /*Esta seccion debido a las nuevas dimensiones que se tienen en tablet, permiten que el contenido se
+    pueda mostrar en columnas, en la primera columna la informacion acerca del autor y en la otra el 
+    formulario de contacto, el comando flex-wrap tiene la misma funcion, en este caso si se desea reducir
+    el tamaño de la pantalla los elementos se alinean en una sola columna, ya que el espacio se ajusta al
+    tamaño en ese momento de la pantalla, caso contrario cuando se haga zoom, los elementos crecen de 
+    tamaño y es aca cuando se aliean en columnas, los elementos se mantendran en el centro con el comando
+    align-items y el comando space-around hara que los elementos mantengan el mismo espacio entre ellos*/
 
     .about .container{
         display: flex;
@@ -348,10 +420,14 @@ footer .social-links {
         align-items: center;
     }
 
+    /*EL encabezado "Acerca de" se mantendra ocupando todo el ancho de la pantalla*/
     .about h2{
         width: 100vw;
     }
 
+    /*Esta area contaba con dos secciones: la seccion bio-info y la seccion contact, a ambas secciones se
+    les modificara el ancho, teniendo cada una un 50% del ancho total de la pantalla, lo que hara que se 
+    muestren en columna*/
     .about .contact{
         width: 50%;
     }
@@ -366,12 +442,24 @@ footer .social-links {
 
 } 
 
-@media only screen and (min-width: 1024px) {
+/*Media query en la que se haran los ajustes necesarios para una correcta visualizacion de la pagina web y
+una mejor experiencia de usuario, en este caso para usuarios de tablets de mayor tamaño y de mayor 
+resolucion. Asi tambien para usuarios de computadoras con resolucion de pantalla de 1024 pixeles*/
+@media only screen and (min-width: 1024px) { 
 
+    /*Los ajustes seran pocos ya que seran algunas areas en especifico las que necesitaran cambio, 
+    todos los demas elementos mantienen las propiedades heredadas del diseño para dispositivos moviles
+    y otras del diseño para tablets*/
+
+     /*Ajuste en la seccion big-hero. Modificacion del tamaño de fuente del texto que muestra la breve
+    descripcion del autor*/
     .container p{
         font-size: 1em;
     }
 
+    /*Para estos dispositivos de mayor tamaño solo sera necesario modificar el area de publicaciones 
+    (post), la forma en la que se mostraran y manejaran los elementos en pantalla seran las mismas que
+    trae del diseño para tablets*/
     .post ul {
         list-style: none;
         display: flex;
@@ -380,6 +468,11 @@ footer .social-links {
         justify-content: flex-start;
     }
     
+    /*El cambio significativo se encuentra aca, se ha aumentado el calculo del ancho maximo de los 
+    elementos, debido a que se cuenta con mayor espacio, las publicaciones tendran un ancho igual cada uno
+    de manera que se puedan visualizar de manera horizontal las tres, y en caso de maximizar la pantalla,
+    el comando felx-wrap y flex-start se encargaran de mantener el espaciado y alineado correcto con el 
+    elemento que hara el salto de linea*/
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
@@ -388,23 +481,37 @@ footer .social-links {
         flex: 1 0 300px;
     }
 
+    /*Modificacion en la altura maxima que puede tener el contenido de cada publicacion*/
     .post ul li article{
         min-height: 450px;
     }
 }
 
+/*Media query en la que se haran los ajustes necesarios para una correcta visualizacion de la pagina web 
+y una mejor experiencia de usuario, en este caso para usuarios de computadoras con pantallas de 
+resolucion en alta definicion y pantallas con 1440 pixeles*/
 @media only screen and (min-width: 1440px) {
 
+    /*Todos los ajustes que se han hecho para los distintos media queries, se mantendran con el mismo
+    estilo y formato para este ultimo media query (son heredados de los diseños que ya se han realizado)*/
+
+    /*Ajuste en la seccion big-hero. Modificacion del tamaño de fuente del texto que muestra la breve
+    descripcion del autor*/
     .container p{
         font-size: 1.5em;
     }
 
+    /*Debido al ancho de la pantalla y el tamaño de resolucion, se modificara el ancho de la pantalla
+    y por ende los elementos se ajustaran al mismo, esto debido a que el formato para dispositivos moviles
+    y tablets es el mismo, sin embargo para estos dispositivos de mayor tamaño, si se mantuviera el formato
+    ya establecido, quedarian grandes espacios a los lados sin contenido, debido a que mantendria el 
+    formato como si se tratara de una pantalla de celular o tablet*/
     .container {
         width: 95%;
         margin: 0 auto;
         max-width: 1440px;
     }
-
+    /*EL ancho del formulario se modifica para mantener el espaciado acorde al tamaño de la pantalla*/
     .contact {
         display: flex;
         flex-direction: column;
