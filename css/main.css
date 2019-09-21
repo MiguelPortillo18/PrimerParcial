@@ -265,6 +265,10 @@ footer .social-links {
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
+
+    .container p{
+        font-size: 0.8em;
+    }
       
     /*seccion big-hero*/
 
@@ -364,6 +368,10 @@ footer .social-links {
 
 @media only screen and (min-width: 1024px) {
 
+    .container p{
+        font-size: 1em;
+    }
+
     .post ul {
         list-style: none;
         display: flex;
@@ -383,16 +391,25 @@ footer .social-links {
     .post ul li article{
         min-height: 450px;
     }
-
-   
 }
 
 @media only screen and (min-width: 1440px) {
+
+    .container p{
+        font-size: 1.5em;
+    }
 
     .container {
         width: 95%;
         margin: 0 auto;
         max-width: 1440px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 0px 1em;
     }
 
 }
